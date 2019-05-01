@@ -11,14 +11,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name:
+          name: Adding tizen to apt.list
           command: |
              echo "deb [trusted=yes] http://download.tizen.org/tools/latest-release/Ubuntu_16.04/ /" >> /etc/apt/sources.list
-             apt upgrade
+             apt update
       - run:
-          name: install packages
+          name: Install packages
           command: |
-             apt upgrade
              apt install -y build-essential git scons libtool autoconf valgrind doxygen wget unzip chrpath gbs
       - run:
           name: Run build for iotivity
