@@ -18,7 +18,7 @@ jobs:
       - run:
           name: install packages
           command: |
-	     apt upgrade
+             apt upgrade
              apt install -y build-essential git scons libtool autoconf valgrind doxygen wget unzip chrpath gbs
       - run:
           name: Run build for iotivity
