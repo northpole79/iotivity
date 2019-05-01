@@ -17,7 +17,7 @@ jobs:
              apt upgrade
       - run:
           name: install packages
-	  command: |
+          command: |
 	     apt upgrade
              apt install -y build-essential git scons libtool autoconf valgrind doxygen wget unzip chrpath gbs
       - run:
